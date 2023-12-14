@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 from datetime import datetime, timedelta
 
-conn = sqlite3.connect('C:\\Users\\keith\\PycharmProjects\\pythonProject1\\Budgeting_App\\data.db', check_same_thread=False)
+conn = sqlite3.connect('data.db', check_same_thread=False)
 c = conn.cursor()
 
 
