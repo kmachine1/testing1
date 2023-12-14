@@ -447,3 +447,11 @@ else:
 		# st.write(result)
 		clean_df3 = pd.DataFrame(result, columns=["Expense", "Cost", "Type", "Date"])
 		st.dataframe(clean_df3.style.applymap(color_df, subset=['Type']))
+
+	with open("data.db", "rb") as fp:
+		btn = st.download_button(
+			label="Download db file",
+			data=fp,
+			file_name="data.db",
+			mime="application/octet-stream"
+		)
